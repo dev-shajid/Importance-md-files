@@ -1,12 +1,14 @@
 
 ## Java, Computer License
 > android\key.properties
+```
 <p> 
   storePassword=1234@1234 <br />
   keyPassword=1234@1234<br />
   keyAlias=key<br />
   storeFile=../../key.jks
 </p>
+```
 
 ## Internet connection on App
 > android\app\src\main\AndroidManifest.xml
