@@ -8,14 +8,14 @@
   storeFile=../../key.jks
 </p>
 
-## InterNet connection on APP
+## Internet connection on App
 > android\app\src\main\AndroidManifest.xml
 
 ```
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
-## splash screens
+## Splash Screens
 > android\app\src\main\res\drawable\launch_background.xml
 
 ```bash
@@ -29,7 +29,7 @@
 </item>
 ```
 
-## splash Color
+## Splash Color
 
 > android\app\src\main\res\values\colors.xml
 
@@ -63,6 +63,7 @@ flutter_icons:
 ### [Build and release an Android app](https://flutter.dev/docs/deployment/android)
 
 ##  Change App Name 
+
 ```
 android\app\src\main\AndroidManifest.xml =>android:label="<app name>"
 ```
