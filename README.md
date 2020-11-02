@@ -11,7 +11,9 @@
 ## InterNet connection on APP
 > android\app\src\main\AndroidManifest.xml
 
-`<uses-permission android:name="android.permission.INTERNET"/>`
+```
+<uses-permission android:name="android.permission.INTERNET"/>
+```
 
 ## splash screens
 > android\app\src\main\res\drawable\launch_background.xml
@@ -31,12 +33,15 @@
 
 > android\app\src\main\res\values\colors.xml
 
-`<resources>
+```
+<resources>
 <color name="ic_launcher_background">#008EFF</color>
 <color name="splash">#008EFF</color>
-</resources>`
+</resources>
+```
 
 ## Internet Connaction in App
+
 > android\app\src\debug\AndroidManifest.xml
 ```bash
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -58,6 +63,15 @@ flutter_icons:
 ### [Build and release an Android app](https://flutter.dev/docs/deployment/android)
 
 ##  Change App Name 
->`
+```
 android\app\src\main\AndroidManifest.xml =>android:label="<app name>"
-`
+```
+
+# Splish Screens
+android\app\src\main\res\drawable-hdpi\icon.png
+# GO TO THIS WEBPAGE
+https://flutter.dev/docs/deployment/android
+#  Change App Name 
+```
+android\app\src\main\AndroidManifest.xml =>android:label="<app name>"
+```
