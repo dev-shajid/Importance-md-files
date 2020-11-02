@@ -71,7 +71,7 @@ android\app\src\main\AndroidManifest.xml =>android:label="<app name>"
 # Splish Screens
 android\app\src\main\res\drawable-hdpi\icon.png
 # GO TO THIS WEBPAGE
-https://flutter.dev/docs/deployment/android
+[Build and release an Android app](https://flutter.dev/docs/deployment/android)
 #  Change App Name 
 ```
 android\app\src\main\AndroidManifest.xml =>android:label="<app name>"
