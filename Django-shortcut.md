@@ -102,9 +102,11 @@ def create_user_profile(sender, instance, created, **kwargs):
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
 ```
+```
 > if not work
 > __init__.py
 > default_app_config = 'user.apps.AccountsConfig'
+```
 
 ```
 LOGIN_REDIRECT_URL = 'client:user_profile request.user.id'
