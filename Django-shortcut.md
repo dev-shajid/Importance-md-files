@@ -86,10 +86,27 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 
-# Outher
+# Auto create profile after created User
 ```
-default_app_config = 'user.apps.AccountsConfig'
+from django.db.models.signals import post_save
+from django.contrib.auth.models import User
+from django.dispatch import receiver
+from .models import Profile
 
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+```
+> if not work
+> __init__.py
+> default_app_config = 'user.apps.AccountsConfig'
+
+```
 LOGIN_REDIRECT_URL = 'client:user_profile request.user.id'
 LOGIN_URL = '/path_to_the_page'
 LOGOUT_REDIRECT_URL = 'login/'
