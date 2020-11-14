@@ -86,14 +86,16 @@ urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 
-#------Outher-----#######
-
+# Outher
+```
 default_app_config = 'user.apps.AccountsConfig'
 
 LOGIN_REDIRECT_URL = 'client:user_profile request.user.id'
 LOGIN_URL = '/path_to_the_page'
 LOGOUT_REDIRECT_URL = 'login/'
-
-#------Outher-----#######
+```
+# Outher 
+```
 pipenv shell ======for active vipenv virtualenv
 pip freeze
+```
