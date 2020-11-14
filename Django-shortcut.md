@@ -111,14 +111,8 @@ def save_user_profile(sender, instance, **kwargs):
 ```
 > > Goto apps.py file
 
-from cmdbox.profiles.signals import create_user_profile, save_user_profile
-class ProfilesConfig(AppConfig):
-    name = 'cmdbox.profiles'
-    verbose_name = _('profiles')
-
     def ready(self):
-        post_save.connect(create_user_profile, sender=User)
-        post_save.connect(save_user_profile, sender=User)
+        import users.signals
 ```
 
 
