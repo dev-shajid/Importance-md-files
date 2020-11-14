@@ -1,38 +1,39 @@
 ﻿# Django-shortcut
+ ```
 rafiq@rrrr-PC:/mnt/c/users/rrrr/Desktop$
 nano ~/.bashrc
 source ~/.bashrc
-
-
+```
+```
 mkvirtualenv --python=python3.8 myproject
-
-
+```
+```
 Model.objects.all().order_by('-id')[:10]
 obj=emp.objects.all()[:10]
+```
 
 
 
 
-
-
+```
 python3 -m venv venv
 
 python -m venv venv
-
-
+```
+```
 source venv/bin/activate
 source venv/Scripts/activate
 pip freeze > requirements.txt
 pip install -r requirements.txt
-
-
+```
+```
 data.instance.user=self.request.user
-
-
+```
+```
 winpty python manage.py createsuperuser
+```
 
-
-{% static ' ' %}
+> {% static ' ' %}
 
 
 virtualenv venv
@@ -60,17 +61,18 @@ pip install mysqlclient
 sudo service mysql start
 
 
-####Root###
+# Root
+```
 os.path.join(BASE_DIR,'templates')
-
-
+```
+```
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR,'staticfiles/', 'static'),)
 STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles/','staticroot/')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'staticfiles/','media')
-
-
+```
+```
 staticfiles/static
 
 from django.conf import settings
@@ -78,7 +80,7 @@ from django.conf.urls.static import static
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
+```
 
 
 
