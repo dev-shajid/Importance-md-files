@@ -1,5 +1,6 @@
-```
+# Django-Paginator
 
+```
 >>> from django.core.paginator import Paginator
 >>> posts = ['1','2','3','4','5','6','7']
 >>> p = Paginator(posts, 2) 
