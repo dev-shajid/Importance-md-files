@@ -1,4 +1,4 @@
-﻿# Django-shortcut
+# Django-shortcut
  ```
 rafiq@rrrr-PC:/mnt/c/users/rrrr/Desktop$
 nano ~/.bashrc
@@ -127,7 +127,9 @@ LOGOUT_REDIRECT_URL = 'login/'
 pipenv shell ======for active vipenv virtualenv
 pip freeze
 ```
-> from django.contrib.auth import views as auth_views   
+## django built in authentication
+### import
+### from django.contrib.auth import views as auth_views   
 ```
  path('login/',auth_views.LoginView.as_view(template_name='accounts/login.html'),name='login'),
     path('logout/',auth_views.LogoutView.as_view(),name='logout'), 
