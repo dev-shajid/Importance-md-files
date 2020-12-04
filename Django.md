@@ -1,4 +1,12 @@
 ﻿# Django
+ 
+ ```
+ get foren key daka
+ cat = single
+ product_set = one or many product connect with Foren key with single cat
+ cat.product_set.all()
+ ```
+ 
 1. Language.objects.exclude(id=3) = = find everything without id =3.
 2. Programmer.objects.filter(age__gt=20) = = find everything greater than 20.
 3. Programmer.objects.filter(age__gte=20) == find everything greater than or equal 20.
