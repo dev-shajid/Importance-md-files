@@ -1,7 +1,7 @@
 # Django Rest API Some Note
 
 
-> Override <b>Serializer</b>
+## Override Serializer
 
 ```python
     class ItemSerializer(serializers.ModelSerializer):
@@ -17,7 +17,7 @@
 ```
 
 
-> Override <b>Viewsets</b>
+## Override Viewsets
 
 ```python
     def list(self, request):
@@ -38,7 +38,7 @@
         return Response(response_dict)
 ```
 
-> Token Auth
+## Token Auth
 
 ```python
     from django.contrib import admin
@@ -66,4 +66,18 @@
         urlpatterns +=[
             re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
         ]
+```
+## Auto input User in Serializer
+
+```python
+
+class PostSerializer(serializers.ModelSerializer):
+    class Meta:
+        model  = Post
+        fields = "__all__"
+        read_only_fields = ['author']
+        
+    def validate(self,obj):
+        obj['author'] = self.context['request'].user
+        return obj
 ```
