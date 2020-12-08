@@ -1,6 +1,6 @@
 ## Uplode File
 
-```
+```javascript
 import React, { useEffect, useState } from 'react'
 import Axios from 'axios'
 import Cookies from 'js-cookie';
