@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 const App = () => {
   const [title, setTitle] = useState("")
   const [image, setImage] = useState(null)
-  const csrftoken = Cookies.get('csrftoken')
+  const csrftoken = Cookies.get('csrftoken') // Get Django CSRF  TOKEN
   const sendata = async () => {
     let formdata = new FormData()
     formdata.append('title', title)
@@ -16,7 +16,7 @@ const App = () => {
     await Axios({
       method: "post",
       url: '/api/posts/',
-      headers: { 'X-CSRFToken': csrftoken },
+      headers: { 'X-CSRFToken': csrftoken }, // Use Django CSRF TOKEN
       data: formdata
     }).then((res) => {
       console.log(res);
