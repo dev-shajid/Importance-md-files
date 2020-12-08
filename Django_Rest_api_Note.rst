@@ -1,7 +1,9 @@
-.. code:: python
+# Django Rest API Some Note
+
 
 > Override <b>Serializer</b>
 
+```python
     class ItemSerializer(serializers.ModelSerializer):
         category = serializers.SerializerMethodField()
         label = serializers.SerializerMethodField()
@@ -12,11 +14,12 @@
             return obj.get_category_display()
         def get_label(self,obj):
             return obj.get_label_display()
-
+```
 
 
 > Override <b>Viewsets</b>
 
+```python
     def list(self, request):
         company = Medicine.objects.all()
         serializer = MedicineSerializers(company, many=True, context={"request": request})
@@ -33,10 +36,11 @@
 
         response_dict = {"error": False, "message": "All Company CompanyBank Data", "data": newmedicinelist}
         return Response(response_dict)
-
+```
 
 > Token Auth
 
+```python
     from django.contrib import admin
     from django.urls import path, include, re_path
     from django.views.generic import TemplateView
@@ -62,3 +66,4 @@
         urlpatterns +=[
             re_path(r'^.*', TemplateView.as_view(template_name='index.html')),
         ]
+```
