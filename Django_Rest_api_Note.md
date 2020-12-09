@@ -81,3 +81,19 @@ class PostSerializer(serializers.ModelSerializer):
         obj['author'] = self.context['request'].user
         return obj
 ```
+## Some Importent Inports
+```python
+from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
+
+from  django.shortcuts import get_object_or_404
+
+from rest_framework.status import HTTP_200_OK
+
+from rest_framework.response import Response
+
+from rest_framework import viewsets
+
+from rest_framework.views import APIView
+
+order_item, created = OrderItem.objects.get_or_create()
+```
