@@ -97,3 +97,40 @@ from rest_framework.views import APIView
 
 order_item, created = OrderItem.objects.get_or_create()
 ```
+## Token Auth serializer
+```python
+from rest_framework import serializers, fields
+from django.contrib.auth import get_user_model
+from .models import Post, Profile
+from rest_framework.authtoken.models import Token
+
+
+User = get_user_model()
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'password','first_name','last_name','email')
+        extra_kwargs = {'password': {'write_only': True, 'required': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        Token.objects.create(user=user)
+        Profile.objects.create(user=user)
+        return user
+```
+## Token Auth Viewset
+```python
+
+
+class UserViewset(APIView):
+    qureryset = User.objects.all()
+    permission_classes = (AllowAny, )
+    def post(self,request):
+        serializers = UserSerializer(data=request.data)
+        if serializers.is_valid():
+            serializers.save()
+            return Response({"error":False,"message":"Update Success full","data":serializers.data})
+        return Response({"error":True,"message":"A user with that username already exists! Try Anather Username"})
+
+```
+
