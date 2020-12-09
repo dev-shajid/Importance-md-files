@@ -44,3 +44,20 @@ export const StateProvider = ({ reducer, initialState, children }) => {
 
 export const useStateValue = () => useContext(Context);
 ```
+## Send State by Header
+```javascript
+  import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { StateProvider } from "./State/StateProvider";
+import reducer, { initialState } from "./State/raducer";
+
+ReactDOM.render(
+  <StateProvider reducer={reducer} initialState={initialState}>
+    <App />
+  </StateProvider>,
+
+  document.getElementById("root")
+);
+```
