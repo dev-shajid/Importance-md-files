@@ -61,3 +61,11 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
+## Get or update global state
+```javascript
+    const [{ cartproductf_uncomplit }, dispatch] = useStateValue()
+    dispatch({
+      type:"<str>",
+      <name>:<data>
+    })
+```
