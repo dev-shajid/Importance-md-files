@@ -1,9 +1,11 @@
+```python
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
 
 # signals imports
+
 from django.dispatch import receiver
 from django.db.models.signals import (
     pre_save,
@@ -44,10 +46,6 @@ def user_post_save_receiver(sender, instance, created, *args, **kwargs):
         print(instance.username, "was just saved")
 
 # post_save.connect(user_created_handler, sender=User)
-
-
-
-
 
 
 
