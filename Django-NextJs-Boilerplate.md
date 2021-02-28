@@ -6,7 +6,7 @@
 
 ---
 
-## For Django
+## Django
 
 ```python
 python -m venv venv
@@ -22,6 +22,65 @@ source venv/Scripts/activate
 
 ```
 django-admin startproject <name> .
+```
+
+## Run Django Dev Server
+
+```python
+python manage.py runserver
+http://127.0.0.1:8000/
+```
+
+## Run NextJs Dev Server
+
+```nede
+npx create-next-app <name>
+npm run dev
+http://localhost:3000/
+```
+
+## Add NextJs dependencies
+
+```
+npm install axios
+npm install js-cookie
+```
+
+### Create components/env.js file on BASE_DIR
+
+```javascript
+import Cookies from "js-cookie";
+
+export const domain = "http://127.0.0.1:8000";
+// export const domain = "";
+
+/*
+    window.localStorage.setItem('myCat', 'Tom');
+    window.localStorage.removeItem('myCat');
+    window.localStorage.clear();
+    window.localStorage.getItem("token");
+    */
+const token = "";
+const csrftoken = Cookies.get("csrftoken");
+export const getheader = {
+  Authorization: `token ${token}`,
+};
+
+export const postheader = {
+  "X-CSRFToken": csrftoken,
+};
+
+export const posttokenheader = {
+  Authorization: `token ${token}`,
+  "X-CSRFToken": csrftoken,
+};
+```
+
+# Edit package.json file
+
+```
+"build": "next build && next export",
+npm run build
 ```
 
 ## Edit Django Setting.py file
@@ -91,65 +150,6 @@ if not settings.DEBUG:
     ]
 ```
 
-## Run Django Dev Server
-
-```python
-python manage.py runserver
-http://127.0.0.1:8000/
-```
-
-## Run NextJs Dev Server
-
-```nede
-npx create-next-app <name>
-npm run dev
-http://localhost:3000/
-```
-
-## Add NextJs dependencies
-
-```
-npm install axios
-npm install js-cookie
-```
-
-### Create components/env.js file on BASE_DIR
-
-```javascript
-import Cookies from "js-cookie";
-
-export const domain = "http://127.0.0.1:8000";
-// export const domain = "";
-
-/*
-    window.localStorage.setItem('myCat', 'Tom');
-    window.localStorage.removeItem('myCat');
-    window.localStorage.clear();
-    window.localStorage.getItem("token");
-    */
-const token = "";
-const csrftoken = Cookies.get("csrftoken");
-export const getheader = {
-  Authorization: `token ${token}`,
-};
-
-export const postheader = {
-  "X-CSRFToken": csrftoken,
-};
-
-export const posttokenheader = {
-  Authorization: `token ${token}`,
-  "X-CSRFToken": csrftoken,
-};
-```
-
-# For Final Project
-
-```
-package.json > "build": "next build && next export",
-npm run build
-```
-
 ### Create app.py on BASE_DIR
 
 ```python
@@ -194,7 +194,7 @@ render_html_static()
 
 ```
 
-```
+```python
 python app.py --dir out
 python manage.py runserver
 http://127.0.0.1:8000/
