@@ -30,10 +30,10 @@ source venv/Scripts/activate
 > python -m pip install --upgrade pip
 
 ```python
-- pip install django
-- pip install djangorestframework
-- pip install django-cors-headers
-- pip install beautifulsoup4
+pip install django
+pip install djangorestframework
+pip install django-cors-headers
+pip install beautifulsoup4
 ```
 
 ```
