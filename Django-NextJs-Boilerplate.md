@@ -28,6 +28,7 @@ python -m venv venv
 source venv/Scripts/activate
 ```
 > python -m pip install --upgrade pip
+> pip install autopep8 
 
 ```python
 pip install django
