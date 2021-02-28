@@ -16,7 +16,7 @@ source venv/Scripts/activate
 
 ```python
 - pip install django
-- pip install django rest framework
+- pip install djangorestframework
 - pip install django-cors-headers
 - pip install beautifulsoup4
 ```
