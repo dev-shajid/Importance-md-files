@@ -9,7 +9,7 @@
 ## Run NextJs Dev Server
 
 ```nede
-npx create-next-app <name>
+npx create-next-app <name> .
 npm run dev
 http://localhost:3000/
 ```
