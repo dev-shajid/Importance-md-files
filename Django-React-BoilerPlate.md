@@ -67,7 +67,7 @@ pip install djangorestframework
 pip install django-cors-headers
 pip install Pillow
 
-django-admin startproject <name> .
+django-admin startproject main .
 ```
 
 ### Edit Django Setting.py file
