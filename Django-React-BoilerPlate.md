@@ -65,7 +65,7 @@ pip install autopep8
 pip install django
 pip install djangorestframework
 pip install django-cors-headers
-pip install pillow
+pip install Pillow
 
 django-admin startproject <name> .
 ```
