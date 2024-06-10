@@ -56,10 +56,10 @@ export const posttokenheader = {
 ---
 
 ```python
-python -m venv venv
-source venv/Scripts/activate
+python3 -m venv venv
+source venv/bin/activate
 
-python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
 pip install autopep8
 
 pip install django
@@ -139,6 +139,6 @@ if not settings.DEBUG:
 # Run Server
 
 ```
-python manage.py runserver
+python3 manage.py runserver
 http://127.0.0.1:8000/
 ```
